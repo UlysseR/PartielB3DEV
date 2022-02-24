@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Exo3_ROUARD</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="add_nom()">Ajouter un nom</button>
+     <button onclick="tirage()">Tirage au sort</button>
+
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+	var tab=new Array();
+	function add_nom(){
+		tab.push(prompt("Saisir un nom"));
+	}
+    function tirage(){
+    	if(tab.length>0){
+        var rand = Math.floor(Math.random()*tab.length);
+        alert("Le nom gagnant est : "+tab[rand]);
+    	}
+    	else alert("Il n'y a pas de nom dans le tableau");
+    }
+</script>
